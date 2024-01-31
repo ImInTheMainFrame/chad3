@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoTech Day 2024</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline.css">
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <!-- Logo and Navigation Links Container -->
+        <div class="left-container">
+            <!-- Logo (wrapped in an anchor tag) -->
+            <a href="home.html">
+                <div class="logo">
+                    <img src="TPLogo.svg" alt="Logo">
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="home.html">Seminar</a></li>
+                <li><a href="services.html">Getting to TP</a></li>
+            </ul>
+        </div>
+
+        <!-- Registration Button -->
+        <button class="registration-button" onclick="openModal()">Registration</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Embedded Google Form -->
+            <iframe width="640px" height="480px"
+                src="https://forms.office.com/Pages/ResponsePage.aspx?id=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxUQkgxOTRWWVRQUTRNSzQyRENHQlEwNDNLWi4u&embed=true"
+                frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+                allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Parallax Section -->
+    <div class="parallax-section">
+        <div id="countdown">
+            <div id="eventtitle">INFOTECH DAY 2024</div>
+            <div id="days"></div>
+            <div id="time">
+                <div class="countdown-item" id="hours"></div>
+                <div class="countdown-item" id="minutes"></div>
+                <div class="countdown-item" id="seconds"></div>
+                <div class="registration-buttons">
+                    <button class="public-registration-button">Public Registration</button>
+                    <button class="student-registration-button">Student Registration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Title Card Section -->
+    <div class="title-card-section">
+        <div class="title-card">
+            <div class="title-text"><a href="projects.html">PROJECTS</a></div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-section">
+        <div class="project-grid">
+            <a href="project1.html" class="project" style="background-image: url('GenerativeAI.jpeg');">Project 1</a>
+            <a href="project2.html" class="project" style="background-image: url('GenerativeAI.jpeg');">Project 2</a>
+            <a href="project3.html" class="project" style="background-image: url('GenerativeAI.jpeg');">Project 3</a>
+            <a href="project4.html" class="project" style="background-image: url('Cybersecurity.jpeg');">Project 4</a>
+            <a href="project5.html" class="project" style="background-image: url('Cybersecurity.jpeg');">Project 5</a>
+            <a href="project6.html" class="project" style="background-image: url('Cybersecurity.jpeg');">Project 6</a>
+            <a href="project7.html" class="project" style="background-image: url('Intelligent.png');">Project 7</a>
+            <a href="project8.html" class="project" style="background-image: url('Intelligent.png');">Project 8</a>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+
+    <!-- Title Card Section -->
+    <div class="title-card-section">
+        <div class="title-card">
+            <div class="title-text">SEMINARS</div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">15th March 2024, 2pm</div>
+                <div class="timeline-content">
+                    <h3>timeline item title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">15th March 2024, 2.30pm</div>
+                <div class="timeline-content">
+                    <h3>timeline item title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">15th March 2024, 3pm</div>
+                <div class="timeline-content">
+                    <h3>timeline item title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">15th March 2024, 3.30pm</div>
+                <div class="timeline-content">
+                    <h3>timeline item title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">15th March 2024, 4pm</div>
+                <div class="timeline-content">
+                    <h3>timeline item title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">15th March 2024, 5pm</div>
+                <div class="timeline-content">
+                    <h3>timeline item title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">15th March 2024, 6pm</div>
+                <div class="timeline-content">
+                    <h3>timeline item title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer
+        style="background-color: #063970; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: flex-start;">
+
+        <!-- Left Section - About Us -->
+        <div style="width: 40%;">
+            <h3>About InfoTech Day 2024</h3>
+            <p>Temasek Polytechnic (TP) InfoTech Day is an annual event organized by the School of
+                Informatics & IT that comprises seminars and a showcase of student projects. The displays at
+                the event feature innovative technology projects completed by final year students.</p>
+        </div>
+
+        <!-- Right Section - Social Media Links -->
+        <div style="width: 35%;">
+            <h3>Follow Us</h3>
+
+            <!-- Social Media Navigation Links -->
+            <nav style="display: flex; flex-direction: column; align-items: flex-start;">
+                <a href="https://www.tp.edu.sg/home.html" style="color: white;">Temasek Polytechnic</a>
+                <a href="https://www.tiktok.com/@tp_iit" style="color: white;">Tik Tok</a>
+                <a href="https://www.instagram.com/tpiit" style="color: white;">Instagram</a>
+                <a href="https://www.facebook.com/iitsch/" style="color: white;">Facebook</a>
+                <a href="https://www.youtube.com/channel/UC6_sz8NUywF-G7g20amakyQ" style="color: white;">Youtube</a>
+                <!-- Add more social media links as needed -->
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer Script
+        const countdownElement = document.getElementById('countdown');
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        const countdownDate = new Date('2024-03-15T00:14:00').getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysElement.innerHTML = `${days} DAYS`;
+            hoursElement.innerHTML = `${hours} HOURS`;
+            minutesElement.innerHTML = `${minutes} MINUTES`;
+            secondsElement.innerHTML = `${seconds} SECONDS`;
+
+            if (distance < 0) {
+                countdownElement.innerHTML = 'EXPIRED';
+            }
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to set the timer immediately
+    </script>
+    <script>
+        // Function to open the modal
+        function openModal() {
+            document.getElementById('registrationModal').style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('registrationModal').style.display = 'none';
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function (event) {
+            var modal = document.getElementById('registrationModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+  }
+
+  .cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid red;
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  #container {
+    text-align: center;
+  }
+
+  #image_container {
+    display: inline-block;
+  }
+
+  .modal {
+    display: none;
+    position: absolute;
+    /* Change from sticky to absolute */
+    top: 65%;
+    right: 25%;
+    width: 25%;
+    height: 58.3%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+
+  .modal-content h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+
+  .modal-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  #image_container {
+    padding-top: 90px;
+  }
+
+  .area-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+
+  }
+
+  @media (max-width: 844px) {
+    body {
+      align-items: flex-start;
+    }
+
+    .modal {
+      top: 10%;
+      right: 10%;
+      width: 80%;
+      height: 80%;
+      position: fixed;
+    }
+  }
+
+  /* Media query for landscape orientation on screens larger than 844px */
+  @media (orientation: landscape) {
+
+    .modal {
+      top: 10%;
+      right: 10%;
+      width: 80%;
+      height: 80%;
+      position: fixed;
+    }
+  }

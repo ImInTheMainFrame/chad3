@@ -1,0 +1,418 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
+    /* Use Roboto Flex */
+}
+
+/* Navbar Style */
+.navbar {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    align-items: center;
+}
+
+/* Logo and Navigation Links Container */
+.left-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo Style */
+.logo img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Navbar Links Style */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Navbar Button Style */
+.registration-button {
+    background-color: orange;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Modal Style */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content Style */
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    animation: glow 4s infinite linear;
+}
+
+/* Close Button Style */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+
+
+/* Additional Media Query for Smaller Screens */
+@media screen and (max-width: 765px) {
+    .navbar {
+        flex-direction: column;
+
+    }
+
+    .left-container {
+        margin-bottom: 10px;
+    }
+
+    .registration-button {
+        width: 100%;
+    }
+}
+
+/* Parallax Section */
+.parallax-section {
+    height: 700px;
+    background-image: url('../background.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#countdown {
+    font-size: 2em;
+    font-weight: bold;
+    border: 2px solid #063970;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(to right, rgba(6, 57, 112, 0.8), rgba(255, 0, 0, 0.8));
+    color: white;
+    font-family: 'Moirai One', sans-serif;
+    /* Use Moirai One font */
+    animation: glow 4s infinite linear;
+    width: 700px;
+    display: inline-block;
+    text-align: center;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
+
+    55% {
+        text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+    }
+}
+
+/* Registration Buttons */
+.registration-buttons {
+    display: flex;
+    justify-content: center;
+    /* Align buttons in the center horizontally */
+    margin-top: 20px;
+    /* Adjust the spacing */
+}
+
+.public-registration-button,
+.student-registration-button {
+    font-size: 1em;
+    /* Decreased font size */
+    font-weight: bold;
+    margin: 0 5px;
+    /* Adjust the margin for spacing */
+    border: 2px solid #063970;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.public-registration-button {
+    background-color: #9ec4ff;
+    /* Pastel blue */
+    color: #063970;
+    /* Dark blue text */
+}
+
+.student-registration-button {
+    background-color: #ffc09e;
+    /* Pastel orange */
+    color: #d9534f;
+    /* Dark red text */
+}
+
+.public-registration-button:hover,
+.student-registration-button:hover {
+    opacity: 0.9;
+    /* Slight opacity on hover */
+}
+
+
+
+/* Event Title */
+#eventtitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    font-family: 'Moirai One', sans-serif;
+    /* Use Moirai One font */
+}
+
+/* Title Card Section Style */
+.title-card-section {
+    background-image: url(../title.png);
+    background-position: center;
+    /* background-position: cover; */
+    text-align: center;
+    padding: 70px;
+}
+
+/* Title Card Style */
+.title-card {
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+}
+
+/* Title Text Style */
+.title-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.title-text a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 50px;
+    text-align: center;
+    background-color: black;
+
+}
+
+/* Project Grid Style */
+/* Apply Animation to Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    border: 2px solid #063970;
+    padding: 20px;
+    border-radius: 8px;
+    animation: glow 4s infinite linear;
+}
+
+/* Individual Project Style */
+.project {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: 1.5px solid #063970;
+    padding: 10px;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Apply greyscale on hover */
+.project:hover {
+    filter: grayscale(100%);
+    transform: scale(1.05);
+}
+
+
+/* Timeline Section Style */
+.timeline-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Timeline Style */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Individual Event Style */
+.event {
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Date Style */
+.date {
+    width: 120px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+/* Line Style */
+.timeline:before {
+    content: '';
+    position: absolute;
+    background-color: #3498db;
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Event Details Style */
+.event-details {
+    text-align: left;
+}
+
+/* Add this media query at the end of your existing CSS */
+@media screen and (max-width: 767px) {
+
+    /* Parallax Section Style for Mobile */
+    .parallax-section {
+        height: 400px;
+    }
+
+    #countdown {
+        width: 90%;
+        max-width: 400px;
+        font-size: 1.5em;
+    }
+
+    #eventtitle {
+        font-size: 2em;
+    }
+
+    /* Title Card Section Style for Mobile */
+    .title-card-section {
+        padding: 30px;
+    }
+
+    .title-card {
+        padding: 15px;
+    }
+
+    .title-text {
+        font-size: 1.5em;
+    }
+
+    /* Projects Section Style for Mobile */
+    .projects-section {
+        padding: 30px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .project {
+        height: 150px;
+        font-size: 1.2em;
+    }
+
+    /* Timeline Section Style for Mobile */
+    .timeline-section {
+        padding: 30px;
+    }
+
+    .event {
+        flex-direction: column;
+    }
+
+    .date {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .timeline:before {
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+
+
+    /* Social Media Navigation Links for Mobile */
+    nav {
+        display: flex;
+        flex-direction: row;
+        /* Ensure links stay side by side */
+        align-items: center;
+        justify-content: center;
+        /* Center links horizontally */
+        flex-wrap: wrap;
+        /* Allow items to wrap onto the next line */
+    }
+}

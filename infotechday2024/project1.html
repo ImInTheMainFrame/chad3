@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoTech Day 2024</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Flex', sans-serif;
+            /* Use Roboto Flex */
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background-color: red;
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow items to wrap onto the next line */
+            justify-content: space-between;
+            padding: 20px;
+            color: white;
+            align-items: center;
+        }
+
+        /* Logo and Navigation Links Container */
+        .left-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            /* Allow items to wrap onto the next line */
+        }
+
+        /* Logo Style */
+        .logo img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        /* Navbar Links Style */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding-top: 10px;
+            flex-wrap: wrap;
+            /* Allow items to wrap onto the next line */
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Navbar Button Style */
+        .registration-button {
+            background-color: orange;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+            /* Adjust margin as needed */
+        }
+
+        /* Modal Style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Modal Content Style */
+        .modal-content {
+            position: relative;
+            margin: 15% auto;
+            padding: 20px;
+            width: 90%;
+            /* Increase the width percentage as needed */
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        /* Close Button Style */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Title Card Section Style */
+        .title-card-section {
+            background-image: url(../title.png);
+            background-position: center;
+            /* or background-position: cover; */
+            text-align: center;
+            padding: 70px;
+            /* Increase the padding to adjust the height */
+        }
+
+        /* Title Card Style */
+        .title-card {
+            background-color: black;
+            /* Choose a background color that matches well */
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            font-family: "Indie Flower", cursive;
+            font-weight: 400;
+        }
+
+        /* Title Text Style */
+        .title-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            /* Choose a text color that matches well */
+        }
+
+        /* Add this style to your CSS */
+        .title-text a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* animation: glow 4s infinite linear; */
+
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+            }
+
+            16.66% {
+                text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+            }
+
+            33.33% {
+                text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+                box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+            }
+
+            50% {
+                text-shadow: 0 0 10px rgba(0, 128, 0, 0.8);
+                box-shadow: 0 0 10px rgba(0, 128, 0, 0.8);
+            }
+
+            66.66% {
+                text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+                box-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+            }
+
+            83.33% {
+                text-shadow: 0 0 10px rgba(75, 0, 130, 0.8);
+                box-shadow: 0 0 10px rgba(75, 0, 130, 0.8);
+            }
+
+            100% {
+                text-shadow: 0 0 10px rgba(148, 0, 211, 0.8);
+                box-shadow: 0 0 10px rgba(148, 0, 211, 0.8);
+            }
+        }
+
+        /* Additional Media Query for Smaller Screens */
+        @media screen and (max-width: 765px) {
+            .navbar {
+                flex-direction: column;
+                /* Change to column layout on smaller screens */
+            }
+
+            .left-container {
+                margin-bottom: 10px;
+                /* Add margin between logo/links and button in mobile view */
+            }
+
+            .registration-button {
+                width: 100%;
+                /* Make the button take up full width in mobile view */
+            }
+
+            .navigation-buttons {
+                padding: 5px;
+            }
+
+            .switch-text-container {
+                margin: 0;
+            }
+
+            .switch-text {
+                font-size: 12px;
+            }
+
+            .navigation-buttons button {
+                padding: 10px 20px;
+                font-size: 18px;
+            }
+
+            .parallax-section {
+                height: 300px;
+            }
+
+            .project-details-section {
+                padding: 20px;
+            }
+
+            .project-title {
+                font-size: 28px;
+            }
+
+            .project-info,
+            .project-description {
+                font-size: 16px;
+            }
+        }
+
+
+        /* Parallax Section */
+        .parallax-section {
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navigation Buttons Section Style */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #F5E6E8;
+            /* Soft pink background color */
+            color: #5E3F46;
+            /* Darker color for text */
+            animation: glow 4s infinite linear;
+
+        }
+
+        /* Navigation Button Style */
+        .navigation-buttons button {
+            padding: 20px 40px;
+            /* Increase padding for a larger size */
+            font-size: 24px;
+            /* Increase font size for better visibility */
+            font-weight: bold;
+            /* Set font weight to bold */
+            border: none;
+            border-radius: 10px;
+            /* Rounded corners */
+            cursor: pointer;
+
+        }
+
+        /* Previous Button Style */
+        .navigation-buttons #previousButton {
+            background-color: #FFD3B5;
+            /* Light peach background color */
+            color: #5E3F46;
+            /* Darker color for text */
+        }
+
+        /* Next Button Style */
+        .navigation-buttons #nextButton {
+            background-color: lightskyblue;
+            /* Light blue background color */
+            color: #215977;
+            /* Darker color for text */
+        }
+
+        /* Switch Text Container Style */
+        .switch-text-container {
+            flex-grow: 1;
+            margin: 0 20px;
+            /* Adjust the margin as needed */
+        }
+
+        /* Switch Text Style */
+        .switch-text {
+            background-color: #F5E6E8;
+            /* Match the background color of the buttons section */
+            padding: 10px;
+            border-radius: 5px;
+            color: #5E3F46;
+            /* Darker color for text */
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Project Details Section Style */
+        .project-details-section {
+            background-color: #FDFDFD;
+            /* Light background color */
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Light shadow for a subtle effect */
+            border-radius: 10px;
+            /* Rounded corners for a softer look */
+            animation: slideInUp 1s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(5px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Project Title Style */
+        .project-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4A4A4A;
+            /* Dark gray color */
+            margin-bottom: 20px;
+            flex: 1 1 100%;
+            /* Full width on small screens, auto width on larger screens */
+        }
+
+        /* Project Info Style */
+        .project-info {
+            font-size: 18px;
+            color: #767676;
+            /* Medium gray color */
+            margin-bottom: 10px;
+            flex: 1 1 100%;
+            /* Full width on small screens, auto width on larger screens */
+        }
+
+        /* Project Description Style */
+        .project-description {
+            font-size: 24px;
+            font-weight: bold;
+            color: #215977;
+            /* Dark blue color */
+            margin-bottom: 10px;
+            flex: 1 1 100%;
+            /* Full width on small screens, auto width on larger screens */
+        }
+
+        /* Team Members Section Style */
+        .team-members-section {
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Team Members Title Style */
+        .team-members-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4A4A4A;
+            /* Dark gray color */
+            margin-bottom: 10px;
+        }
+
+        /* Team Member Style */
+        .team-member {
+            font-size: 18px;
+            color: #767676;
+            /* Medium gray color */
+            margin-bottom: 5px;
+        }
+
+        /* Additional styles for better spacing */
+        .project-info-item {
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(5px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Pros and Cons Section Style */
+        .pros-cons-section {
+            display: flex;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Pros and Cons Rectangle Style */
+        .pros-cons-rectangle {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            /* Display items in a column layout */
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            /* Reduce padding for better spacing */
+            color: white;
+        }
+
+        /* Left Rectangle Style */
+        .left-rectangle {
+            background-color: #4A90E2;
+            /* Light blue background color */
+        }
+
+
+        /* Pros and Cons Container Style */
+        .pros-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* List Style for Pros and Cons */
+        .pros-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* List Item Style for Pros and Cons */
+        .pros-container ul li {
+            margin: 20px 0;
+            /* Adjust margin for spacing */
+            font-size: 18px;
+        }
+
+        /* Icon Style */
+        i {
+            margin-right: 5px;
+        }
+
+        /* Additional Media Query for Smaller Screens */
+        @media screen and (max-width: 765px) {
+            .pros-cons-rectangle {
+                padding: 20px;
+            }
+
+            .pros-container ul li {
+                margin: 10px 0;
+                /* Adjust margin for spacing in smaller screens */
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <script>
+        let currentImageIndex = 0;
+
+        function changeImage(direction) {
+            const images = [
+                'Cybersecurity.jpeg',
+                'GenerativeAI.jpeg',
+                'Intelligent.png'
+            ];
+
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            const parallaxSection = document.querySelector('.parallax-section');
+            parallaxSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
+
+            const photoText = document.getElementById('photoText');
+            photoText.textContent = `Photo ${currentImageIndex + 1} (Click on the buttons to switch!)`;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <!-- Logo and Navigation Links Container -->
+        <div class="left-container">
+            <!-- Logo (wrapped in an anchor tag) -->
+            <a href="home.html">
+                <div class="logo">
+                    <img src="TPLogo.svg" alt="Logo">
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="home.html">Seminar</a></li>
+                <li><a href="services.html">Getting to TP</a></li>
+            </ul>
+        </div>
+
+        <!-- Registration Button -->
+        <button class="registration-button" onclick="openModal()">Registration</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Embedded Google Form -->
+            <iframe width="640px" height="480px"
+                src="https://forms.office.com/Pages/ResponsePage.aspx?id=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxUQkgxOTRWWVRQUTRNSzQyRENHQlEwNDNLWi4u&embed=true"
+                frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+                allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Parallax Section -->
+    <div class="parallax-section" style="background-image: url('Cybersecurity.jpeg')"></div>
+    <!-- Navigation Buttons Section -->
+    <div class="navigation-buttons">
+        <button id="previousButton" onclick="changeImage(-1)">Previous</button>
+        <div class="switch-text-container">
+            <p class="switch-text" id="photoText">Photo 1 (Click on the buttons to switch!)</p>
+        </div>
+        <button id="nextButton" onclick="changeImage(1)">Next</button>
+    </div>
+
+    <!-- Project Details Section -->
+    <div class="project-details-section">
+        <div class="project-title">Dummy Project Title</div>
+        <div class="project-info project-info-item">Supervisor: Dr. John Doe</div>
+        <div class="project-info project-info-item">Project Background: Lorem ipsum dolor sit amet...</div>
+        <div class="project-description project-info-item">Project Description:</div>
+        <div class="project-info project-info-item">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
+        </div>
+        <div class="project-info project-info-item">Tech Areas: Artificial Intelligence, Machine Learning, Web
+            Development</div>
+        <div class="project-info project-info-item">Ind. Partners: Company A, Company B</div>
+
+        <!-- Team Members Section -->
+        <div class="team-members-section">
+            <div class="team-members-title">Team Members:</div>
+            <div class="team-member">John Doe</div>
+            <div class="team-member">Jane Smith</div>
+            <div class="team-member">Bob Johnson</div>
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="pros-cons-section">
+        <!-- Left Rectangle -->
+        <div class="pros-cons-rectangle left-rectangle">
+            <!-- Benefits Container -->
+            <div class="pros-container">
+                <h2>Key Benefits</h2>
+                <ul>
+                    <li><i class="fas fa-chart-line"></i> Increased Profitability</li>
+                    <li><i class="fas fa-briefcase"></i> Improved Efficiency</li>
+                    <li><i class="fas fa-users"></i> Enhanced Team Collaboration</li>
+                    <li><i class="fas fa-lightbulb"></i> Innovative Solutions</li>
+                    <li><i class="fas fa-shield-alt"></i> Strengthened Security</li>
+                    <li><i class="fas fa-globe"></i> Global Reach</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer
+        style="background-color: #063970; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: flex-start;">
+
+        <!-- Left Section - About Us -->
+        <div style="width: 40%;">
+            <h3>About InfoTech Day 2024</h3>
+            <p>Temasek Polytechnic (TP) InfoTech Day is an annual event organized by the School of
+                Informatics & IT that comprises seminars and a showcase of student projects. The displays at
+                the event feature innovative technology projects completed by final year students.</p>
+        </div>
+
+        <!-- Right Section - Social Media Links -->
+        <div style="width: 35%;">
+            <h3>Follow Us</h3>
+
+            <!-- Social Media Navigation Links -->
+            <nav style="display: flex; flex-direction: column; align-items: flex-start;">
+                <a href="https://www.tp.edu.sg/home.html" style="color: white;">Temasek Polytechnic</a>
+                <a href="https://www.tiktok.com/@tp_iit" style="color: white;">Tik Tok</a>
+                <a href="https://www.instagram.com/tpiit" style="color: white;">Instagram</a>
+                <a href="https://www.facebook.com/iitsch/" style="color: white;">Facebook</a>
+                <a href="https://www.youtube.com/channel/UC6_sz8NUywF-G7g20amakyQ" style="color: white;">Youtube</a>
+                <!-- Add more social media links as needed -->
+            </nav>
+        </div>
+    </footer>
+
+
+
+</body>
+
+
+<script>
+    // Function to open the modal
+    function openModal() {
+        document.getElementById('registrationModal').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('registrationModal').style.display = 'none';
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function (event) {
+        var modal = document.getElementById('registrationModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+</script>
+
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoTech Day 2024</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <!-- Logo and Navigation Links Container -->
+        <div class="left-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="TPLogo.svg" alt="Logo">
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="home.html">Seminar</a></li>
+                <li><a href="services.html">Getting to TP</a></li>
+            </ul>
+        </div>
+
+        <!-- Registration Button -->
+        <button class="registration-button" onclick="openModal()">Registration</button>
+    </div>
+
+    <script>
+        // Function to open the registration modal
+        function openModal() {
+            var modal = document.getElementById('registrationModal');
+            modal.style.display = 'block';
+        }
+
+        // Function to close the registration modal
+        function closeModal() {
+            var modal = document.getElementById('registrationModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+    <!-- Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Embedded Google Form -->
+            <iframe width="640px" height="480px"
+                src="https://forms.office.com/Pages/ResponsePage.aspx?id=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxUQkgxOTRWWVRQUTRNSzQyRENHQlEwNDNLWi4u&embed=true"
+                frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+                allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Title Card Section -->
+    <div class="title-card-section">
+        <div class="title-card">
+            <div class="title-text">PROJECTS</div>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="rectangle" onclick="filterProjects('All')">
+            <button class="section-button">All Projects</button>
+            <p class="button-label">Click to Filter</p>
+        </div>
+        <div class="rectangle" onclick="filterProjects('GenerativeAI')">
+            <button class="section-button">Generative AI & Analytics</button>
+            <p class="button-label">Click to Filter</p>
+        </div>
+        <div class="rectangle" onclick="filterProjects('Cybersecurity')">
+            <button class="section-button">Cybersecurity & Digital Forensics</button>
+            <p class="button-label">Click to Filter</p>
+        </div>
+        <div class="rectangle" onclick="filterProjects('IIA')">
+            <button class="section-button">Intelligent & Immersive Applications</button>
+            <p class="button-label">Click to Filter</p>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-section">
+        <div class="project-grid">
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="GenerativeAI">
+                <div class="project-image" style="background-image: url('GenerativeAI.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="Cybersecurity">
+                <div class="project-image" style="background-image: url('Cybersecurity.jpeg');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+
+            <div class="project" data-category="IIA">
+                <div class="project-image" style="background-image: url('Intelligent.png');"></div>
+                <div class="project-text">
+                    <a href="project1.html">Project 1</a>
+                    <p>Additional Text</p>
+                </div>
+            </div>
+            <!-- Repeat for other projects -->
+            <!-- set data-category for filter -->
+        </div>
+    </div>
+
+    <!-- Title Card Section -->
+    <div class="title-card-section">
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+        <table>
+            <!-- Table Headings -->
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody>
+                <!-- Dummy Data Row 1 -->
+                <tr class="GenerativeAI">
+                    <td>Project Alpha</td>
+                    <td>
+                        <button onclick="viewMore('Project Alpha')">View More</button>
+                    </td>
+                </tr>
+                <!-- Dummy Data Row 2 -->
+                <tr class="Cybersecurity">
+                    <td>Project Beta</td>
+                    <td>
+                        <button onclick="viewMore('Project Beta')">View More</button>
+                    </td>
+                </tr>
+
+                <tr class="IIA">
+                    <td>Project Beta</td>
+                    <td>
+                        <button onclick="viewMore('Project Beta')">View More</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for Project Details -->
+    <div id="projectDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProjectDetailsModal()">&times;</span>
+            <div id="projectDetailsContent">
+                <!-- Project details will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer
+        style="background-color: #063970; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: flex-start;">
+
+        <!-- Left Section - About Us -->
+        <div style="width: 40%;">
+            <h3>About InfoTech Day 2024</h3>
+            <p>Temasek Polytechnic (TP) InfoTech Day is an annual event organized by the School of
+                Informatics & IT that comprises seminars and a showcase of student projects. The displays at
+                the event feature innovative technology projects completed by final year students.</p>
+        </div>
+
+        <!-- Right Section - Social Media Links -->
+        <div style="width: 35%;">
+            <h3>Follow Us</h3>
+
+            <!-- Social Media Navigation Links -->
+            <nav style="display: flex; flex-direction: column; align-items: flex-start;">
+                <a href="https://www.tp.edu.sg/home.html" style="color: white;">Temasek Polytechnic</a>
+                <a href="https://www.tiktok.com/@tp_iit" style="color: white;">Tik Tok</a>
+                <a href="https://www.instagram.com/tpiit" style="color: white;">Instagram</a>
+                <a href="https://www.facebook.com/iitsch/" style="color: white;">Facebook</a>
+                <a href="https://www.youtube.com/channel/UC6_sz8NUywF-G7g20amakyQ" style="color: white;">Youtube</a>
+                <!-- Add more social media links as needed -->
+            </nav>
+        </div>
+    </footer>
+
+
+    <script>
+        function viewMore(projectName) {
+            // Assuming you have additional data for each project (photo, background, team members)
+            var projectData = {
+                'Project Alpha': {
+                    'photo': 'project_alpha_photo.jpg',
+                    'background': 'Project Alpha is an amazing project...',
+                    'teamMembers': ['John Doe', 'Jane Doe']
+                },
+                'Project Beta': {
+                    'photo': 'project_beta_photo.jpg',
+                    'background': 'Project Beta is an awesome project...',
+                    'teamMembers': ['Bob Smith', 'Alice Johnson']
+                }
+                // Add more projects as needed
+            };
+
+            // Get the modal and content elements
+            var modal = document.getElementById('projectDetailsModal');
+            var modalContent = document.getElementById('projectDetailsContent');
+
+            // Check if the project name exists in the projectData
+            if (projectData.hasOwnProperty(projectName)) {
+                // Populate the modal content with project details
+                modalContent.innerHTML = `
+                    <img src="${projectData[projectName].photo}" alt="${projectName} Photo" style="max-width: 100%;">
+                    <h2>${projectName}</h2>
+                    <p>${projectData[projectName].background}</p>
+                    <h3>Team Members:</h3>
+                    <ul>${projectData[projectName].teamMembers.map(member => `<li>${member}</li>`).join('')}</ul>
+                `;
+
+                // Open the modal
+                modal.style.display = 'block';
+            }
+        }
+
+        // Function to close the project details modal
+        function closeProjectDetailsModal() {
+            var modal = document.getElementById('projectDetailsModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+    <script>
+        function filterProjects(category) {
+            // Get all project elements
+            var projects = document.querySelectorAll('.project');
+
+            // Loop through each project
+            projects.forEach(function (project) {
+                // Check if the project belongs to the selected category or if the category is 'All'
+                if (category === 'All' || project.dataset.category === category) {
+                    // Show the project
+                    project.style.display = 'flex'; // Assuming you want to set display to flex
+                } else {
+                    // Hide the project
+                    project.style.display = 'none';
+                }
+            });
+
+            // Get all table rows
+            var rows = document.querySelectorAll('tbody tr');
+
+            // Loop through each table row
+            rows.forEach(function (row) {
+                // Check if the row has a class corresponding to the selected category or if the category is 'All'
+                if (category === 'All' || row.classList.contains(category)) {
+                    // Show the row
+                    row.style.display = 'table-row';
+                } else {
+                    // Hide the row
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
